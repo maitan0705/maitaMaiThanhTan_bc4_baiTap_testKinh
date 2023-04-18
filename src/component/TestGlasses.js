@@ -3,12 +3,12 @@ import dataGlasses from "./dataGlasses.json";
 import './TestGlasses.css'
 class TestGlasses extends Component {
   state = {
-    Glassescuren:{},
+    Glassescuren: dataGlasses[0],
   };
   renderGlassesList = () => {
     return dataGlasses.map((item, index) => {
       return <div key={item.id} className="item-image">
-        <img src={item.url}  alt="" onClick={this.setState({ Glassescuren: item })} />
+        <img src={item.url}  alt="" onClick={()=>this.setState({ Glassescuren: item })} />
       </div>;
     });
   };
